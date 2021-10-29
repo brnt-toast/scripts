@@ -1,0 +1,11 @@
+#!/usr/bin/bash
+
+git init
+touch .gitignore
+printf "node_modules\ndist\n.cache\n" > .gitignore 
+
+npm init -y
+npm i -D parcel-bundler pug bulma
+touch index.pug
+
+git status
