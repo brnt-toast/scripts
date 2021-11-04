@@ -5,7 +5,7 @@ touch .gitignore
 printf "node_modules\ndist\n.cache\n" > .gitignore 
 
 npm init -y
-npm i -D parcel-bundler pug
+npm i -D parcel pug
 
 touch index.pug
 echo "Finished..."
