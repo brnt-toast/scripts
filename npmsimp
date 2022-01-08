@@ -5,7 +5,7 @@ touch .gitignore
 printf "node_modules\ndist\n.cache\n" > .gitignore 
 
 npm init -y
-npm i -D parcel pug
+npm i -D parcel pug sass
 
-touch index.pug
+touch index.pug main.sass
 echo "Finished..."
