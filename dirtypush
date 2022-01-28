@@ -8,7 +8,7 @@ read "message"
 git commit -m "$message"
 
 # push
-push
+git push
 
 echo '==='
 echo 'horrible...'
