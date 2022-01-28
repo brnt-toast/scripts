@@ -1,7 +1,14 @@
 #!/bin/bash
 
-# add all commit 
-# commit
-# push
+# add all commit
+git add .
 
+# commit
+read "message"
+git commit -m "{$message}"
+
+# push
+push
+
+echo '==='
 echo 'horrible...'
