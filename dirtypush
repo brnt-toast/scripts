@@ -5,7 +5,7 @@ git add .
 
 # commit
 read "message"
-git commit -m "{$message}"
+git commit -m "$message"
 
 # push
 push
