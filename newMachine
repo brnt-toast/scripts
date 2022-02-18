@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+
+sudo apt update -y && sudo apt upgrade -y
+
+sudo apt install vim -y \
+		htop -y \
+		ranger -y \
+		tmux -y \
+		python3 -y \
+		python3-pip -y
+		
+# NOTE: Make this a python script with actual testing 
+# install DOCKER & NVM
+
+
+
