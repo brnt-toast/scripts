@@ -4,6 +4,7 @@ sudo apt update -y && sudo apt upgrade -y
 
 sudo apt install vim -y \
 		htop -y \
+		curl -y \
 		ranger -y \
 		tmux -y \
 		python3 -y \
