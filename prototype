@@ -3,15 +3,13 @@
 npm init -y
 npm pkg set scripts.dev="npx parcel src/index.pug"
 
-
 npm i -D parcel tailwindcss postcss autoprefixer
 npm i pug react react-dom 
 
-# tailwind.config.js
+# creation of tailwind.config.js
 npx tailwindcss init
 
-# create src folder and starting files
-mkdir src
+# create src folder for the boilerplate
 
 # Create config files
 touch .postcssrc .parcelrc .gitignore 
@@ -90,6 +88,7 @@ root.render(
 );
 " > src/index.js
 
+# Hello-world sanity check
 printf "\
 export default App = () => {
     return (
@@ -99,7 +98,5 @@ export default App = () => {
     )
 }
 " > src/App.js
-
-echo "Finished..."
 
 npm run dev
