@@ -1,11 +1,105 @@
 #!/usr/bin/bash
 
-touch .gitignore
-
-printf "node_modules\ndist\n.cache\n" > .gitignore 
-
 npm init -y
-npm i -D parcel pug sass
+npm pkg set scripts.dev="npx parcel src/index.pug"
 
-touch index.pug main.sass
+
+npm i -D parcel tailwindcss postcss autoprefixer
+npm i pug react react-dom 
+
+# tailwind.config.js
+npx tailwindcss init
+
+# create src folder and starting files
+mkdir src
+
+# Create config files
+touch .postcssrc .parcelrc .gitignore 
+
+# Create source files
+touch src/index.pug src/main.css src/index.js src/App.js
+
+
+# Add files to .gitignore
+printf "\
+node_modules/
+dist/
+.*-cache
+" > .gitignore 
+
+# SVG support
+printf "\
+{
+  \"extends\": \"@parcel/config-default\",
+  \"transformers\": {
+    \"*.svg\": [\"...\", \"@parcel/transformer-svg-react\"]
+  }
+}
+" > .parcelrc
+
+# Enable TailwindCSS JIT mode
+printf "\
+{
+  \"plugins\": {
+    \"tailwindcss\": {}
+  }
+}
+" > .postcssrc
+
+# TailwindCSS config to support .pug files
+printf "\
+module.exports = {
+  content: [
+  	\"./src/**/*.{html,pug,js,jsx}\"
+  ],
+  theme: {
+    extend: {},
+  },
+  plugins: [],
+}
+" > tailwind.config.js
+
+# Append Tailwind to CSS file
+printf "\
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+" > src/main.css
+
+# Boilerplate src/index.pug file for react
+printf "\
+doctype html
+html(lang=\"en\")
+  head
+    link(rel=\"stylesheet\", href=\"./main.css\")
+  body
+    #app
+    script(type=\"module\", src=\"./index.js\")
+" > src/index.pug
+
+# React 18 src/index.js
+printf "\
+import React from \"react\";
+import { createRoot } from \"react-dom/client\";
+import App from \"./App\";
+
+const rootElement = document.getElementById(\"app\");
+const root = createRoot(rootElement);
+root.render(
+    <App />
+);
+" > src/index.js
+
+printf "\
+export default App = () => {
+    return (
+       <div className=\"App\">
+            <h1>hello world from src/App.js</h1>
+       </div>
+    )
+}
+" > src/App.js
+
 echo "Finished..."
+
+npm run dev
