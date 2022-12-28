@@ -10,6 +10,7 @@ npm i pug react react-dom
 npx tailwindcss init
 
 # create src folder for the boilerplate
+mkdir src
 
 # Create config files
 touch .postcssrc .parcelrc .gitignore 
