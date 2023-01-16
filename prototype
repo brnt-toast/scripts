@@ -63,6 +63,10 @@ printf "\
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+* {
+    background-color: rgba(0, 0, 255, 0.12);
+}
 " > src/main.css
 
 # Boilerplate src/index.pug file for react
