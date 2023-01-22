@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+
+sudo apt install -y tmux \
+git \
+ranger \
+htop \
+vim \
+python3-pip \
+
+python3 -m pip install \
+ipython \
