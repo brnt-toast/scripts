@@ -6,6 +6,7 @@ ranger \
 htop \
 vim \
 python3-pip \
+curl \
 
 python3 -m pip install \
 ipython \
