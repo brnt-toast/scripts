@@ -103,5 +103,3 @@ export default App = () => {
     )
 }
 " > src/App.js
-
-npm run dev
