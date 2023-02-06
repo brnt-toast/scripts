@@ -1,4 +1,4 @@
-#!/usr/bin/bash
+#!/usr/bin/env bash
 
 npm init -y
 npm pkg set scripts.dev="npx parcel src/index.pug"
@@ -103,5 +103,3 @@ export default App = () => {
     )
 }
 " > src/App.js
-
-npm run dev
