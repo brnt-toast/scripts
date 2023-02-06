@@ -1,0 +1,6 @@
+#!/usr/bin/env bash  
+
+vagrant init ubuntu/focal64
+vagrant up
+vagrant ssh
+
