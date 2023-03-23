@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+
+git clone https://www.github.com/brnt-toast/dotfiles.git
+git clone https://www.github.com/brnt-toast/scripts.git
+git clone https://www.github.com/brnt-toast/CookBook.git
+git clone https://www.github.com/brnt-toast/virtual-lab.git
