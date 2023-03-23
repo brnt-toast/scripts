@@ -1,6 +1,9 @@
-#!/usr/bin/env bash
+#!/usr/bin/bash
 
-git clone https://www.github.com/brnt-toast/dotfiles.git
-git clone https://www.github.com/brnt-toast/scripts.git
-git clone https://www.github.com/brnt-toast/CookBook.git
-git clone https://www.github.com/brnt-toast/virtual-lab.git
+ME="https://www.github.com/brnt-toast/"
+repos=("dotfiles" "scripts" "CookBook" "virtual-lab")
+
+for i in "${repos[@]}";
+do
+        git clone "$ME$i"
+done
