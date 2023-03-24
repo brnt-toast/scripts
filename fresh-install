@@ -12,3 +12,4 @@ transmission \
 python3 -m pip install \
 ipython \
 numpy \
+ansible \
