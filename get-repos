@@ -1,7 +1,7 @@
 #!/usr/bin/bash
 
 ME="https://www.github.com/brnt-toast/"
-repos=("dotfiles" "scripts" "CookBook" "virtual-lab")
+repos=("portfolio" "dotfiles" "scripts" "CookBook" "virtual-lab")
 
 for i in "${repos[@]}"; # [@] expands out the repos array
 do
