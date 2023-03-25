@@ -7,3 +7,5 @@ for i in "${repos[@]}"; # [@] expands out the repos array
 do
         git clone "$ME$i"
 done
+
+git clone https://www.gitlab.com/brnt-toast/notes.git
