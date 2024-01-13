@@ -1,12 +1,16 @@
 #!/usr/bin/env python3
 
-import random 
+"""
+a script for lazy git commits -- should be used with caution.
+"""
+
+import random
 import os
 
 data = {
-    "fish" : "}~<(((*>" , 
-    "questioning" : "＼(°ロ＼)", 
-    "come on" : "щ(ﾟДﾟщ)", 
+    "fish" : "}~<(((*>" ,
+    "questioning" : "＼(°ロ＼)",
+    "come on" : "щ(ﾟДﾟщ)",
     "run" : "ε=ε=ε=┌(;*´Д`)ﾉ",
     "face_palm" : "(－‸ლ)",
     "disapproval" : "ಠ_ಠ",
